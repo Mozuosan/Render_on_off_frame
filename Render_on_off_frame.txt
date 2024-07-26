@@ -1,0 +1,33 @@
+import bpy
+
+# 対象のコレクション名を指定
+collection_name = "YourCollectionName"
+
+# キーフレームを設定するフレーム番号
+frame_start = 1
+frame_hide = 20
+frame_show = 50
+
+# 最初のレンダー状態を指定
+initial_render_on = True  # レンダーする場合はTrue、しない場合はFalse
+
+# 指定したコレクションを取得
+collection = bpy.data.collections.get(collection_name)
+if not collection:
+    print(f"コレクション '{collection_name}' が見つかりません")
+else:
+    # コレクション内の全オブジェクトに対して処理を行う
+    for obj in collection.objects:
+        # 初期状態を設定してキーフレームを挿入
+        obj.hide_render = not initial_render_on
+        obj.keyframe_insert(data_path="hide_render", frame=frame_start)
+        
+        # frame_hideでレンダーをオフにしてキーフレームを挿入
+        obj.hide_render = True
+        obj.keyframe_insert(data_path="hide_render", frame=frame_hide)
+        
+        # frame_showでレンダーをオンにしてキーフレームを挿入
+        obj.hide_render = False
+        obj.keyframe_insert(data_path="hide_render", frame=frame_show)
+    
+    print(f"コレクション '{collection_name}' 内の全オブジェクトに対して初期状態とキーフレームを設定しました")
