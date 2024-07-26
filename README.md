@@ -1,4 +1,4 @@
-Blender用 Pythonスクリプト Render_on _off_frame.txt  
+# Blender用 Pythonスクリプト Render_on _off_frame.txt  
 動作確認環境：Win 11, Blender 4.1
 
 内容：スクリプト内で指定したCollectionにある全てのオブジェクトを対象として、レンダーの有効／
