@@ -1,10 +1,10 @@
-Blender用 Pythonスクリプト Render_on _off_frame.txt
+Blender用 Pythonスクリプト Render_on _off_frame.txt  
 動作確認環境：Win 11, Blender 4.1
 
 内容：スクリプト内で指定したCollectionにある全てのオブジェクトを対象として、レンダーの有効／
 無効のキーを打つ。
 
-操作手順
+操作手順  
 １）ワークスペースのスクリプト作成（Scripting）タブを開き新規テキストデータブロックを作成する
 
 ２）サンプルスクリプトファイル「Render_on _off_frame.txt」をメモ帳ツールなどで開き内容をコピー
